@@ -19,6 +19,12 @@ data=read.csv("/data/words.txt",sep=':')
 # read the columns of dataframe 
 names(data)
 
+levels(data$word)
+
+levels(data$word)[18] <- 'comaple'
+
+data <- rbind(data,c('comaple',0.015))
+
 # set colors
 colors=c('red','blue','green','maroon','brown','navy','purple','black')
 
